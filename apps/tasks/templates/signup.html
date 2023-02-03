@@ -1,0 +1,14 @@
+﻿{% extends 'base.html' %} {% block content %}
+
+<h1>Singup</h1>
+
+{{ error }}
+
+<form method="POST">
+  {# Tiene que estar el comando csrf_token sino no redirecciona elformulario #}
+  {% csrf_token %} {{ form.as_p }}
+
+  <button>Signup</button>
+</form>
+
+{% endblock %}
